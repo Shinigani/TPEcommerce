@@ -1,0 +1,28 @@
+=== TP E-commerce ===
+
+Page d'accueil --> Non Connecté (Bouton Login et Bouton Inscription)
+               --> Connecté (Bouton Profile et Bouton déconnexion)
+
+Page d'inscription
+Page de Login
+Page de Profile
+
+$_GET['page'] => Accède à la page de la variable demandé
+
+Gestion des sessions
+
+Page d'accueil
+
+	Liste des articles (Lien vers une page unique pour l'article)
+  									-> Si l'article n'est pas dans le cookies => Ajout au panier
+                    -> Si l'article dans le cookies => Retirer du panier
+  
+  		header('Location: index.php');
+
+	Bouton Recevoir sa shopping list par mail => Outil mail de php.
+
+
+== DATA ==
+
+$users = array("id", "login", "password", "email");
+$articles = array("id", "title", "description", "prix");
