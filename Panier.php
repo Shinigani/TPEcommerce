@@ -18,7 +18,7 @@ include_once "function.php";
       </div>
     </div>
     <?php
-
+      Panier();
     ?>
   </body>
 </html>

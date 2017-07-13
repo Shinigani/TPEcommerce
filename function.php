@@ -29,7 +29,7 @@ function deconnection()
 
 
 
-function panier ($idObjet)
+function AjoutPanier ($idObjet)
 {
   global $users;
   global $articles;
@@ -66,7 +66,22 @@ function panier ($idObjet)
   header('Location: ' . $_SERVER['HTTP_REFERER']);
 }
 
-function ajoutPanier($post)
+function Panier()
 {
+  global $users;
+  global $articles;
+  global $j;
+  $j=1;
+  if (isset($_SESSION['user']['panier'])) {
+    do
+    {
+      echo "<p>".$_SESSION['user']['panier'][$j]['title']."</p>";
+      echo "<p>".$_SESSION['user']['panier'][$j]['description']. "</p>";
+      echo "<p>".$_SESSION['user']['panier'][$j]['prix']."</p>";
+      $j++;
+    } while (!empty($_SESSION['user']['panier'][$j]));
+  }else {
+    echo "Votre panier est vide";
+  }
 
 }

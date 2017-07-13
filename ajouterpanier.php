@@ -2,4 +2,4 @@
 include_once "function.php";
 
 
-panier($_GET['id']);
+AjoutPanier($_GET['id']);
